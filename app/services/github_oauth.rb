@@ -3,8 +3,8 @@ attr_reader :code, :client_id, :client_secret, :access_token
 
   def initialize(code)
     @code = code
-    @client_id = '7b59c1904f1e2f706091'
-    @client_secret = 'b9742934284677364188a40a1b0220848464a868'
+    @client_id = ENV["github_client_id"]
+    @client_secret = ENV["github_client_secret"]
   end
 
   def access_token
