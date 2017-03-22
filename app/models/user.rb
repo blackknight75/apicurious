@@ -19,6 +19,8 @@ class User < ApplicationRecord
     self.followers = authorized_data[:followers]
     self.following_url = authorized_data[:following_url]
     self.following = authorized_data[:following]
+    self.name = authorized_data[:name]
+    self.location = authorized_data[:location]
     self.save
   end
 end

@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
     access_token = github_oauth.access_token
     authorized_data = github_oauth.data
     user = User.find_user(authorized_data, access_token)
-
     user.set_attributes(authorized_data, access_token)
 
     session[:user_id] = user.id
