@@ -4,3 +4,18 @@ nav {
 nav ul li:hover {
    background-color: #4078c0;
 }
+#category {
+  display:inline;
+}
+#category-items {
+    display: flex;
+    justify-content:space-around;
+    list-style-type:none;
+}
+span.badge.new {
+    color: #2B292E;
+    background-color: #ededed;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: #4078c0;
+}
