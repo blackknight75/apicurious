@@ -1,0 +1,17 @@
+<h1>My Repos</h1>
+
+<div class="row">
+<% @repos.each do |repo| %>
+  <div class="col s12 m12">
+    <div class="card white darken-1">
+      <div class="card-content blue-text">
+        <span class="card-title"><strong><%= repo.name %></strong></span>
+        <p>Language: <%= repo.language %></p>
+        <p>Last Update: <%= repo.updated_at %></p>
+      </div>
+      <div class="card-action">
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
