@@ -1,0 +1,17 @@
+<h1>Starred</h1>
+
+<div class="row">
+<% @starred_repos.each do |starred| %>
+  <div class="col s12 m12">
+    <div class="card white darken-1">
+      <div class="card-content blue-text">
+        <span class="card-title"><strong><%= starred.name %></strong></span>
+        <p>Language: <%= starred.language %></p>
+        <p>Last Update: <%= starred.updated_at %></p>
+      </div>
+      <div class="card-action">
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

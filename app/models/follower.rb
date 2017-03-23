@@ -1,4 +1,5 @@
 class Follower
+attr_reader :name, :image, :url
 
   def initialize(params)
     @name = params[:login]
@@ -8,7 +9,6 @@ class Follower
 
   def self.all(current_user)
     followers_hashes = GithubService.followers(current_user)
-    binding.pry
     followers_hashes.map do |follower_hash|
       Follower.new(follower_hash)
     end

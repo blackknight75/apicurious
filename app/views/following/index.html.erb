@@ -1,16 +1,16 @@
-<h1>Followers</h1>
+<h1>Following</h1>
 
 <div class="row">
-  <% @followers.each do |follower| %>
+  <% @followings.each do |following| %>
     <div class="col s12 m8 offset-m2 l6 offset-l3">
        <div class="card-panel grey lighten-5 z-depth-1">
          <div class="row valign-wrapper">
            <div class="col s2">
-             <img src=<%= follower.image %> alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+             <img src=<%= following.image %> alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
            </div>
            <div class="col s10">
-               <h4><%= follower.name %></h4>
-               <p><%= link_to "Github", follower.url %></p>
+               <h4><%= following.name %></h4>
+               <p><%= link_to "Github", following.url %></p>
            </div>
          </div>
        </div>
