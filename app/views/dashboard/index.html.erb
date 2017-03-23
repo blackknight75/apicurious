@@ -14,12 +14,13 @@
      </div>
    </div>
  </div>
+
  <div class="col s8 m8" id="category">
-   <ul class="hide-on-med-and-down" id="category-items">
+   <ul id="category-items">
      <li><a href="/repos">Repositories<span class="new badge" data-badge-caption=""><%= current_user.public_repos %></span></a></li>
-     <li><a href="badges.html">Stars</a></li>
-     <li><a href="badges.html">Followers</a><span class="new badge" data-badge-caption=""><%= current_user.followers %></span></li>
-     <li><a href="badges.html">Following<span class="new badge" data-badge-caption=""><%= current_user.following %></span></a></li>
+     <li><a href="/starred">Stars</a><span class="new badge" data-badge-caption=""><%= @starred_repos_count %></span></li>
+     <li><a href="/followers">Followers</a><span class="new badge" data-badge-caption=""><%= current_user.followers %></span></li>
+     <li><a href="/following">Following<span class="new badge" data-badge-caption=""><%= current_user.following %></span></a></li>
    </ul>
  </div>
- </div>
+</div>
