@@ -1,6 +1,6 @@
 class Starred
   attr_reader :name, :description, :language, :updated_at
-  
+
   def initialize(params)
     @name = params[:name]
     @description = params[:description]
