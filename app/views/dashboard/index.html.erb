@@ -22,5 +22,31 @@
      <li><a href="/followers">Followers</a><span class="new badge" data-badge-caption=""><%= current_user.followers %></span></li>
      <li><a href="/following">Following<span class="new badge" data-badge-caption=""><%= current_user.following %></span></a></li>
    </ul>
+
+  <h4>Popular Repositories</h4>
+  <% @repos.each do |repo| %>
+    <div class="col s12 m6">
+      <div class="card white">
+        <div class="card-content black-text">
+          <span class="card-title"><strong><%= repo.name %></strong></span>
+          <p><%= repo.language %></p>
+          <p>Updated: <%= repo.updated_at %></p>
+        </div>
+        <div class="card-action">
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+   <div class="col s12 m8">
+     <div class="card white">
+       <div class="card-content black-text">
+         <span class="card-title">Recent <%= link_to "Commit", '/commits' %> Activity</span>
+         <% @commits_by_repo.each do |commits| %>
+         <%= current_user.username + "/" + commits.keys[0] + "  #{commits.values.flatten.count}" + " commits" %><br>
+         <% end %>
+       </div>
+     </div>
+   </div>
  </div>
 </div>

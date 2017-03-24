@@ -1,0 +1,23 @@
+<h1>Following Events</h1>
+
+<table class="bordered highlight">
+  <thead>
+    <tr>
+        <th></th>
+        <th>User</th>
+        <th>Event Type</th>
+        <th>Event Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @following_events.each do |event| %>
+      <tr>
+        <td><img src=<%= event.user_image %> height=40 width=40 alt="" class="circle responsive-img"></td>
+        <td><%= event.username %></td>
+        <td><%= event.event_type %></td>
+        <td><%= event.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
