@@ -19,3 +19,6 @@ span.badge.new {
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
     color: #4078c0;
 }
+.blue-grey.darken-1 {
+    background-color: #2B292E !important;
+}
