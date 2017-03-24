@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  before_action :authorize!
 
   def create
     github_oauth = GithubOauth.new(params['code'])
