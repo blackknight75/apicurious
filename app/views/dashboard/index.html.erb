@@ -28,8 +28,9 @@
      <li><a href="/followers">Followers</a><span class="new badge" data-badge-caption=""><%= current_user.followers %></span></li>
      <li><a href="/following">Following<span class="new badge" data-badge-caption=""><%= current_user.following %></span></a></li>
    </ul>
+<br>
 
-  <h4>Popular Repositories</h4>
+  <h5>Popular Repositories</h5>
   <% @repos.each do |repo| %>
     <div class="col s12 m6">
       <div class="card white">
