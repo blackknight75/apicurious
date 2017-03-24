@@ -9,7 +9,6 @@ class Repo
   end
 
   def self.all(current_user)
-    #returns an array of user specific repo objects
     repo_hashes = GithubService.repos(current_user)
     repo_hashes.map do |repo_hash|
       Repo.new(repo_hash)

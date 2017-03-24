@@ -12,6 +12,12 @@
        <p><i class="material-icons left">room</i><%= current_user.location %></p>
        <p><i class="material-icons left">email</i><%= link_to "devbox4714@gmail.com", "" %></p>
      </div>
+     <div class="left card-action">
+       <h5><%= link_to "Organizations", '/organizations' %></h5>
+       <% @organizations.each do |organization| %>
+        <%= image_tag organization.image, size: '50' %>
+       <% end %>
+     </div>
    </div>
  </div>
 
@@ -38,13 +44,42 @@
     </div>
   <% end %>
 
-   <div class="col s12 m8">
+   <div class="col s12 m12">
      <div class="card white">
        <div class="card-content black-text">
          <span class="card-title">Recent <%= link_to "Commit", '/commits' %> Activity</span>
          <% @commits_by_repo.each do |commits| %>
          <%= current_user.username + "/" + commits.keys[0] + "  #{commits.values.flatten.count}" + " commits" %><br>
          <% end %>
+       </div>
+     </div>
+   </div>
+
+   <div class="col s12 m12">
+     <div class="card white">
+       <div class="card-content black-text">
+         <span class="card-title">Recent <%= link_to "Followed User", '/received_events' %> Events</span>
+         <table class="bordered highlight">
+           <thead>
+             <tr>
+                 <th></th>
+                 <th>User</th>
+                 <th>Event Type</th>
+                 <th>Event Date</th>
+             </tr>
+           </thead>
+
+           <tbody>
+             <% @following_events.each do |event| %>
+               <tr>
+                 <td><img src=<%= event.user_image %> height=40 width=40 alt="" class="circle responsive-img"></td>
+                 <td><%= event.username %></td>
+                 <td><%= event.event_type %></td>
+                 <td><%= event.created_at %></td>
+               </tr>
+             <% end %>
+           </tbody>
+         </table>
        </div>
      </div>
    </div>

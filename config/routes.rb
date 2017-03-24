@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get 'following',            to: 'following#index'
   get 'starred',              to: 'starred#index'
   get 'received_events',      to: 'following_events#index'
+  get 'organizations',        to: 'organizations#index'
   resources :dashboard, only: [:index]
 end

@@ -1,0 +1,18 @@
+<h1>Organizations</h1>
+
+<div class="row">
+  <% @organizations.each do |organization| %>
+    <div class="col s4 m4">
+      <div class="card large">
+          <div class='center-align'><%= image_tag organization.image, size: '200' %></div>
+        <div class="card-content">
+          <h5 class='center-align'><%= organization.name %></h5>
+          <p><%= organization.description %></p>
+        </div>
+        <div class="card-action">
+          <p>Members: <%= @organizations.count  %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
